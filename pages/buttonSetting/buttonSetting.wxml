@@ -1,0 +1,28 @@
+
+
+<view >
+  
+  <van-cell-group wx:for-item="studyButton" wx:for="{{deviceStudyButtonList}}" class="cellGroup" inset>
+  <van-field
+    model:value="{{  }}"
+    placeholder="请输入按钮名称"
+    label="{{'按钮'+(index+1)}}"
+    input-align="right"
+
+  />
+
+<van-cell  title="设置按钮">
+  <van-button bind:click="mqttStudy" data-topic="{{studyButton.topic}}" data-number="{{index}}" slot="right-icon" size="small"  type="danger">学习按钮</van-button>
+</van-cell>
+
+</van-cell-group>
+
+
+<view style="width: 100%;height: 100px;">
+  
+</view>
+<view bindtap="concernEdit" class="deviceSetting">
+  
+  <van-button size="large"  type="primary">确认修改</van-button>
+</view>
+</view>

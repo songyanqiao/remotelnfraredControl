@@ -1,0 +1,40 @@
+
+
+<view>
+  
+  <van-cell-group>
+  <van-field
+    model:value="{{ device01 }}"
+    placeholder="请输入设备名称"
+    label="设备一"
+    input-align="right"
+
+  />
+  <van-field
+    model:value="{{ device02 }}"
+    placeholder="请输入设备名称"
+    label="设备二"
+    input-align="right"
+  
+  />
+  <van-field
+    model:value="{{ device03 }}"
+    placeholder="请输入设备名称"
+    label="设备三"
+    input-align="right"
+ 
+  />  <van-field
+    model:value="{{ device04 }}"
+    placeholder="请输入设备名称"
+    label="设备四"
+    input-align="right"
+
+  />
+</van-cell-group>
+
+
+<view bindtap="concernEdit" class="deviceSetting">
+  
+  <van-button size="large"  type="primary">确认修改</van-button>
+</view>
+</view>

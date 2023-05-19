@@ -1,0 +1,21 @@
+/* pages/airconditionSetting/airconditionSetting.wxss */
+.table{
+
+  width: 95%;
+margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.tr{
+  width: 49%;
+  display: flex;
+border: rgb(197, 197, 197) solid 1rpx;height: auto;
+}
+.td{
+  word-wrap: anywhere;
+  height: auto;
+  font-size: 11px;
+  padding: 10px;
+  text-align: center;
+}

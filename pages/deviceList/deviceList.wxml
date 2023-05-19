@@ -1,0 +1,47 @@
+<view class="app">
+  <van-notice-bar
+  wx:if="{{mqttState}}"
+  color="#ffffff"
+  background="#00dd00"
+  left-icon="checked"
+  text="已连接至福州龙程MQTT服务器"
+/>
+<van-notice-bar
+  color="#ffffff"
+  wx:else="{{mqttState}}"
+  background="#FF0000"
+  left-icon="warning"
+  text="未连接至福州龙程MQTT服务器"
+/>
+  <view class="deviceList ">
+    <view data-bigButtonId="{{item.id}}"  data-topic="{{item.topic}}"   bindtap="deviceDetail" wx:for="{{deviceListData}}" class="device bubble">
+      <view style="width: 100%; display: flex;justify-content: center;">
+        <image class="deviceImage" src="../../assets/img/device.png" mode="" />
+      </view>
+      <view class="deviceName">
+        {{item.name}}
+      </view>
+      <view class="deviceID">
+      ID:{{item.deviceid}}
+      </view>
+    </view>
+  </view>
+
+
+<view wx:if="{{userId=='3'}}" class="control">
+  
+  <image bindtap="control" style="width:80px;height:80px;" src="../../assets/img/control.png" mode=""/>
+  <!-- <view style="text-align: center;">
+    监控
+  </view> -->
+</view>
+
+
+<view  bindtap="deviceSetting" class="deviceSetting">
+  
+  <van-button size="large"  type="info">设备修改</van-button>
+</view>
+
+
+
+</view>

@@ -1,0 +1,14 @@
+<view class="app">
+  <view style="width: 100%; display: flex; justify-content: center;">
+    <image mode="aspectFit" src="../../assets/img/image.png" style="width: 100%;"></image>
+  </view>
+  <van-cell-group>
+    <van-field clearable required label="用户名" model:value="{{username}}" placeholder="请输入用户名"></van-field>
+    <van-field required border="{{false}}" label="密码" model:value="{{password}}" placeholder="请输入密码" type="password"></van-field>
+  </van-cell-group>
+  <view style="width: 100%; display: flex; justify-content: center;">
+    <view style="width: 150px; margin-top: 20px;">
+      <van-button bindtap="login" customClass="btn" size="large" type="primary">登录</van-button>
+    </view>
+  </view>
+</view>

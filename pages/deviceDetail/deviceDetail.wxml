@@ -1,0 +1,30 @@
+<view class="app">
+
+
+<view style="width: 100%; display: flex;justify-content: center; ">
+  
+  <view bindtap="aircondition" class="aircondition">
+    
+    空 调 模 式
+  </view>
+
+
+</view>
+
+<view class="buttonList">
+  
+  <view bindtap="onPushMsg" data-topic="{{button.topic}}"  data-number="{{index}}" wx:for-item="button" wx:for="{{deviceButtonList}}" class="button bubble">
+    <view style="width: 100%; display: flex;justify-content: center;">
+   <image class="buttonImage"  src="../../assets/img/button.png" mode=""/>  </view>
+   
+    <view class="buttonName">
+      {{button.name}}
+    </view>
+  </view>
+</view>
+
+<view bindtap="buttonSetting" class="deviceSetting">
+  
+  <van-button size="large"  type="info">按钮设置</van-button>
+</view>
+</view>

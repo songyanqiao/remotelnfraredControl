@@ -1,0 +1,67 @@
+/* pages/deviceDetail/deviceDetail.wxss */
+.buttonList{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.button{
+  margin: 6px;
+  width: 30%;
+background-color: rgb(249, 224, 255);
+border-radius: 10px;
+}
+.buttonImage{
+  padding: 10px;
+  width: 40px;
+height: 40px;
+}
+.buttonName{
+
+  width: 100%;
+text-align: center;
+  font-size: 18px;
+  color: #7a3bcc;
+  font-weight: 600;
+padding-bottom: 10px;
+  margin-bottom: 5px;
+
+}
+.buttonSetting{
+  width: 100%;
+  text-align: center;
+    font-size: 14px;
+    color: #e9ffff;
+    background-color: rgb(255, 152, 152);
+    font-weight: 600;
+  border-radius: 0 0 10px 10px;
+   
+}.deviceSetting{
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
+}.aircondition{
+
+  width: 80%;
+  height: 100px;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-weight: 600;
+  font-size: 30px;
+  background-color: #a4abd6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}.bubble{
+  position: relative;
+  overflow: hidden;
+ }
+
+ .bubble:active {
+  background-color: rgb(216, 196, 221) !important;
+  opacity: 1;
+  transition: 0.1s;
+ }

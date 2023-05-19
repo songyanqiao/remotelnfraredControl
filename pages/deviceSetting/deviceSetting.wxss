@@ -1,0 +1,8 @@
+/* pages/deviceSetting/deviceSetting.wxss */
+.deviceSetting{
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
+}

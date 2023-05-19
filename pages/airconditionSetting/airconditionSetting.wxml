@@ -1,0 +1,33 @@
+<view>
+
+  <van-notice-bar mode="closeable" text="请根据您的空调品牌选择对应的编码" />
+
+  <van-cell-group>
+    <van-field model:value="{{ code }}" center clearables label="空调库码" placeholder="请输入空调库码" border="{{ false }}" use-button-slot>
+      <van-button bind:click="sendCode" slot="button" size="small" type="primary">
+        开始匹配
+      </van-button>
+      <van-button  style="margin-left: 10px;" bind:click="setAll" slot="button" size="small" type="primary">
+        一键设置
+      </van-button>
+    </van-field>
+  </van-cell-group>
+
+
+
+  <view class="table">
+
+    <view wx:for="{{brands}}" class="tr">
+
+      <view class="td">
+
+        {{item.name}}
+      </view>
+
+      <view class="td">
+        {{item.code}}
+      </view>
+    </view>
+
+  </view>
+</view>

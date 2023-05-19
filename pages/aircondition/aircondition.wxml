@@ -1,0 +1,130 @@
+<van-notify id="van-notify" />
+<view>
+
+
+  <!-- 屏幕 -->
+  <view wx:if="{{isOpen}}" class="screen">
+
+
+    <view class="temperatureTextBox">
+
+
+<view class="temperatureText">
+  
+
+  <view class="number">
+    {{temperature}}
+  </view>
+  <view class="sign">
+    ℃
+  </view>
+</view>
+    </view>
+
+    <view style="width: 100%; display: flex;height:40px;">
+      <view class="modeTextBox">
+
+模式:{{mode}}
+      </view>
+      <view class="modeTextBox">
+
+风速:{{windSpeed}}
+</view>
+<view class="modeTextBox">
+
+自动扫风:{{autoScavenging}}
+</view>
+    </view>
+
+
+  </view>
+  <view wx:else class="screen">
+
+
+<view class="closeState">
+  
+  关闭
+</view>
+
+
+
+</view>
+
+  <!-- 按钮 -->
+  <view class="airButton">
+
+    <!-- 开启关闭 -->
+    <view style="width: 100%; display: flex;height: 80px;">
+      <view bindtap="open" class="bubble" style=" border: 1px solid #ececec; color: rgb(102, 211, 99);width: 50%; height: 100%; line-height: 80px;">
+        开启
+      </view>
+
+      <view bindtap="close" class="bubble" style="border: 1px solid #ececec;width: 50%; color: rgb(224, 70, 70); height: 100%;line-height: 80px;">
+        关闭
+      </view>
+    </view>
+
+
+    <!-- 模式 -->
+    <view  style="width: 100%; display: flex;height: 80px;">
+
+
+      <view bindtap="changeMode" data-name="{{item}}"  data-index="{{index}}" item= wx:for="{{modeList}}" class="modeBox bubble">
+        {{item}}
+      </view>
+     
+    </view>
+
+    <!-- 温度 -->
+    <view style="width: 100%; display: flex;height: 80px;">
+
+
+      <view bindtap="addTemperature" class="temperatureBox bubble">
+
+        +
+      </view>
+      <view   class="temperatureBox bubble">
+
+        温度
+      </view>
+      <view bindtap="subTemperature" class="temperatureBox bubble">
+
+        -
+      </view>
+
+
+
+    </view>
+
+
+    <!-- 风速 -->
+    <view style="width: 100%; display: flex;height: 80px;">
+
+      <view bindtap="changeWindSpeed" data-name="{{item}}" data-index="{{index}}" wx:for="{{windSpeedList}}" class="windSpeedBox bubble">
+        {{item}}
+      </view>
+     
+    </view>
+
+    <!-- 自动扫风 -->
+    <view style="width: 100%; display: flex;height: 80px;">
+      <view bindtap="openAutoMode" class="windAutoModeBox bubble">
+        开启
+      </view>
+      <view class="windAutoModeBox bubble">
+        自动扫风
+      </view>
+      <view bindtap="closeAutoMode" class="windAutoModeBox bubble">
+        关闭
+      </view>
+    </view>
+
+  </view>
+
+  <view bindtap="airconditionSetting" class="matching">
+
+    匹 配 遥 控 器
+
+  </view>
+
+</view>
